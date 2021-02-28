@@ -1,0 +1,1 @@
+web: python coinmarketcap_selenium_script.py
