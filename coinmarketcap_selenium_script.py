@@ -107,8 +107,7 @@ if __name__ == "__main__":
         try:
             obj = CoinMarketCapSeleniumScript()
             print(f"Sleeping for {wait_hours} hours...")
+            time.sleep(wait_hours * 60 * 60)
             obj.driver.close()
-            time.sleep(wait_hours * 60 * 60)
         except Exception as err:
-            time.sleep(wait_hours * 60 * 60)
             pass

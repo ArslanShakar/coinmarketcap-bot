@@ -1,1 +1,1 @@
-web: python coinmarketcap_selenium_script.py
+worker: python coinmarketcap_selenium_script.py
