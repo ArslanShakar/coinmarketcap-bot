@@ -94,9 +94,10 @@ class CoinMarketCapSeleniumScript(GoogleSheetAutomation):
 
         item['Price Change Percentage 24h'] = stats['priceChangePercentage24h']
         item["Watchlist #"] = coin_info['watchCount']
-        item["6 Hour"] = round(item['1 Hour'] * 4, 2)
-        item["3 Day"] = round(item['1 Day'] * 2, 2)
-        item["14 Day"] = round(item['7 Day'] * 1.5, 2)
+
+        item["6 Hour"] = ''  # round(item['1 Hour'] * 4, 2)
+        item["3 Day"] = ''  # round(item['1 Day'] * 2, 2)
+        item["14 Day"] = ''  # round(item['7 Day'] * 1.5, 2)
 
         print(item)
         self.update_gs_row(item)
