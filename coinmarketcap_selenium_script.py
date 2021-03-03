@@ -18,7 +18,7 @@ class CoinMarketCapSeleniumScript(GoogleSheetAutomation):
 
     sheet_headers = [
         "Coin", "Link", "Rank", "Price", "24 Hr Volume", "Market Cap",
-        "Watchlist #", "1 Hour", "6 Hour", "1 Day", "3 Day", "7 Day",
+        "Watchlist", "1 Hour", "6 Hour", "1 Day", "3 Day", "7 Day",
         "14 Day", "Price Change - 24h"
     ]
 
