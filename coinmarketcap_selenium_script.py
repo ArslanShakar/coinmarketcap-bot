@@ -19,7 +19,7 @@ class CoinMarketCapSeleniumScript(GoogleSheetAutomation):
     sheet_headers = [
         "Coin", "Link", "Rank", "Price", "24 Hr Volume", "Market Cap",
         "Watchlist #", "1 Hour", "6 Hour", "1 Day", "3 Day", "7 Day",
-        "14 Day", "Price Change Percentage 24h"
+        "14 Day", "Price Change - 24h"
     ]
 
     chrome_options = webdriver.ChromeOptions()
@@ -92,7 +92,7 @@ class CoinMarketCapSeleniumScript(GoogleSheetAutomation):
         # quotes = coin_raw.get('props', {}).get('initialState', {}).\
         #     get('cryptocurrency', {}).get('quotesLatest', {}).get('data', {})
 
-        item['Price Change Percentage 24h'] = stats['priceChangePercentage24h']
+        item['Price Change - 24h'] = stats['priceChangePercentage24h']
         item["Watchlist #"] = coin_info['watchCount']
 
         item["6 Hour"] = ''  # round(item['1 Hour'] * 4, 2)
