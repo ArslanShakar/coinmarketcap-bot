@@ -24,6 +24,9 @@ class GoogleSheetAutomation:
         print(f"{self.sheet_name} Google Spreadsheet Connected!")
 
     def update_gs_row(self, record):
+        self.records = {r['Coin']: row_id for row_id, r in enumerate(self.sheet.get_all_records(), start=1)}
+        self.sheet_headers = {h: i for i, h in enumerate(self.sheet.row_values(1), start=1) if h}
+
         values = [record.get(key, '') for key in self.sheet_headers]
         is_row_exist = record['Coin'] in self.records
 
