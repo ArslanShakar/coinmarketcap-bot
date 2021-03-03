@@ -99,8 +99,8 @@ class CoinMarketCapSeleniumScript(GoogleSheetAutomation):
         item["3 Day"] = ''  # round(item['1 Day'] * 2, 2)
         item["14 Day"] = ''  # round(item['7 Day'] * 1.5, 2)
 
-        print(item)
-        self.update_gs_row(item)
+        # print(item)
+        # self.update_gs_row(item)
 
 
 if __name__ == "__main__":
@@ -108,9 +108,10 @@ if __name__ == "__main__":
 
     while True:
         try:
-            obj = CoinMarketCapSeleniumScript()
-            print(f"Sleeping for {wait_hours} hours...")
-            time.sleep(wait_hours * 60 * 60)
-            obj.driver.close()
+            # obj = CoinMarketCapSeleniumScript()
+            # print(f"Sleeping for {wait_hours} hours...")
+            # time.sleep(wait_hours * 60 * 60)
+            # obj.driver.close()
+            pass
         except Exception as err:
             pass
